@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="./styles/registeration.css" />
+    <link rel="icon" href="./images/icon.png" />
+  </head>
+  <body>
+    <div class="container1">
+      <header>
+        <div class="logo">
+          <h1>Quiz?</h1>
+        </div>
+      </header>
+      <div class="form">
+        <center>
+          <h1>Registration Form</h1>
+        </center>
+        <form action="">
+          <input
+            type="text"
+            placeholder="First Name.."
+            id="first-name"
+            pattern="[a-zA-Z]+"
+            required
+            onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)"
+          />
+          <input
+            type="text"
+            placeholder="Last Name.."
+            id="last-name"
+            pattern="[a-zA-Z]+"
+            required
+            onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)"
+          />
+
+          <input type="email" placeholder="Email Address" id="email" required />
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            minlength="8"
+            required
+            pattern=".{8,}"
+            title="8 characters minimum"
+          />
+          <input
+            type="password"
+            placeholder="Re-Type Password"
+            id="repeatPassword"
+            id="re"
+            required
+            pattern=".{8,}"
+            title="8 characters minimum"
+          />
+          <input type="submit" value="Sign Up" id="signUpButton" class="btn" />
+
+          <div class="go-to-login">
+            <p>
+              Already have an account ?
+              <a id="forms-navigator">Sign In</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="img">
+      <img
+        src="./images/main-wallpaper.jpeg"
+        style="height: 100%0; width: 100%"
+      />
+    </div>
+    <script src="./js/registration.js"></script>
+  </body>
+</html>
